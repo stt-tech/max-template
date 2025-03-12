@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "source": "pages/Home/index"
+    }
+  ],
+  "window": {
+    "title": "Max App"
+  },
+  "scripts": [
+    "<script src=\"https://appsec-mobile.meituan.com/h5guard/H5guard.js\"></script>"
+  ],
+  "metas": [
+    "\n<script id=\"racf-sdk-container\">\n      if (typeof window !== 'undefined') {\n        const supportsES6 = (() => {\n          try {\n            new Function(\"(a = 0) => a\");\n            return true;\n          } catch (err) {\n            return false;\n          }\n        })();\n        if (supportsES6) {\n          const racfScriptEle = document.createElement('script')\n          racfScriptEle.src = 'https://s3.meituan.net/mnpm-cdn/@dzfe-dzfe-racf-sdk-0.0.7/build/dzfe-racf-sdk.umd.js'\n          const appContainerEle = document.getElementById('racf-sdk-container')\n          racfScriptEle.addEventListener('load', () => {\n            const runRacfScript = document.createElement('script')\n            runRacfScript.type = 'text/javascript'\n            runRacfScript.innerHTML = `\n              if (window.DZFERCFESDK) {\n                new DZFERCFESDK({\n                \t// 参数配置                 \n                  env: window.location.href.indexOf('test') > -1 || window.location.href.indexOf('.51ping') > -1 ? 'DEV' : 'PRODUCT', // 默认 PRODUCT\n                  pageUrl: '' // 页面 URL 信息，不传默认为当前 location 的 origin + pathname + hash\n                });\n              }\n              `\n            document.body.appendChild(runRacfScript)\n          })\n          document.body.insertBefore(racfScriptEle, appContainerEle)\n        }\n      }\n    </script>\n"
+  ]
+}
