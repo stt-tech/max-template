@@ -8,6 +8,7 @@ const targets = process.env.MAX_TARGET_ENV ? [process.env.MAX_TARGET_ENV] : ['mr
 const webConf = targets.includes('web')
   ? {
     hash: 'contenthash',
+    publicPath: `${process.env.PUBLIC_PATH || ''}/web/`,
   }
   : {};
 
