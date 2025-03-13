@@ -1,0 +1,90 @@
+对于我要求你制作的所有页面，你要完全按照美团App的设计原则来实现。美团App的设计原则如下：
+
+吸引注意：用户的浏览动作不是读，不是看，而是扫。设计中应该强化关键信息，弱化次要信息，剔除无关信息。
+理解高效：信息表达遵循现实世界习惯，表达一致、准确无歧义，让用户对信息的理解更高效。
+反馈合理：对于当前状态系统应该及时给予相对应的反馈，让用户对自己操作后的结果了然于胸。
+操作流畅：达成相同目标的情况下，操作步骤越少越好，相关操作间的轨迹越短越好。
+拓展性强：设计规范需要能够在可配置的范围内，基于功能和场景灵活调整。
+
+美团App视觉规律
+
+色彩：舒适明快、对比清晰、感知一致
+文字：层级分明、梯度克制、字形简洁
+板式：亲密-分组合理、对比-重点突出、精简-层级精简
+质感：扁平化为主、质感简约、细腻
+图形：表意明确、使用圆角、视觉对齐
+
+对于页面中需要使用到图片的地方，都可以使用这个图片来占位：https://p0.meituan.net/travelcube/5496eba23018928d16e88454ebd9366a6667.png
+
+当你在使用@hfe/max-image组件时，如果需要设置图片的宽高，请使用style={{width: 100, height: 100}}的形式来设置，而不是使用width和height属性。且display属性请设置为block。对应的图片源属性为source，类型为Object，属性包括uri和width、height。
+
+对于你使用Max框架过程中所需要用到的组件，不可使用任何第三方组件库，只能使用Max框架本身提供的组件。Max框架本身提供的组件包括：Button、Icon、Input、Modal、Toast等。
+
+- @hfe/max-view
+- @hfe/max-text
+- @hfe/max-image
+- @hfe/max-button
+- @hfe/max-textinput
+- @hfe/max-textinput-custom
+- @hfe/max-linear-gradient
+- @hfe/max-imagebackground
+- @hfe/max-scrollview
+- @hfe/max-recyclerview
+- @hfe/max-webview
+- @max/leez-blur-view
+- @hfe/max-image-zoomer
+- @hfe/max-keyboard-avoid-view
+- @hfe/max-lifecycle
+- @hfe/max-priority
+- @hfe/max-provider
+- @hfe/max-slider
+- @max/mbc-sensor
+- @max/mbc-animate-view
+- @max/mbc-animated
+- @hfe/max-universal-component-adapter
+- @hfe/max-pullrefresh
+
+你可以使用以下命令来安装所有依赖的组件：yarn add @max/mbc-dependencies --save
+
+上述组件使用的具体方式如下：
+
+import View from '@hfe/max-view';
+import Text from '@hfe/max-text';
+
+注意，如果一定需要使用某个组件的单个小版本。只需执行 yarn add @hfe/max-**@特定version。 此时@max/mbc-dependencies 内部对应的组件版本只会安装在@max/mbc-dependencies 文件夹下的 node_modules，不会被引用到。
+
+以下是具体使用的示例代码：
+
+import { createElement } from '@hfe/max';
+import Text from '@hfe/max-text';
+import View from '@hfe/max-view';
+import ScrollView from '@hfe/max-scrollview';
+import Button from '@hfe/max-button';
+import Image from "@hfe/max-image";
+import TextiInput from "@hfe/max-textinput";
+import TextiInputCustom from "@hfe/max-textinpt-custom";
+import LinearGradient from "@hfe/max-linear-gradient";
+import ImageBackground from "@hfe/max-imagebackground";
+import RecyclerView from "@hfe/max-recyclerview";
+import Webview from "@hfe/max-webview";
+import BlurView from "@max/leez-blur-view";
+import ImageZoomer from "@hfe/max-image-zoomer";
+import KeyboardAvoidingView from "@hfe/max-keyboard-avoid-view";
+import Lificycle from "@hfe/max-lifecycle";
+import Priority from "@hfe/max-priority";
+import Provider from "@hfe/max-provider";
+import Slider from "@hfe/max-slider";
+import Sensor from "@max/mbc-sensor";
+import AnimateView from "@max/mbc-animate-view";
+import { Animated } from "@max/mbc-animated";
+
+/**
+ * 测试页面，集成组件涉及所有相关功能
+ */
+const Demo = () => {
+  return (
+    <View />
+  );
+};
+
+export default Demo;
