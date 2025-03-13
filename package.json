@@ -1,7 +1,7 @@
 {
   "name": "@nibfe/max-demo-ypf",
   "author": "Max Team",
-  "description": "Max 跨端应用工程",
+  "description": "Max è·¨ç«¯åºç¨å·¥ç¨",
   "version": "1.0.31",
   "scripts": {
     "start": "max-app start --config build.js --disableAsk",
@@ -41,15 +41,23 @@
     "@mrn/react-native": "^3.0.40"
   },
   "dependencies": {
+    "@hfe/mad-max": "^0.1.8",
+    "@hfe/mad-max-page-context": "^0.1.8",
+    "@hfe/max-button": "^5.0.0",
     "@hfe/max-image": "^4.1.0",
     "@hfe/max-text": "^4.1.0",
     "@hfe/max-view": "^4.1.0",
+    "@max/create-app-shared": "^1.0.0",
+    "@max/driver-universal": "^1.0.3",
     "@max/leez-dependencies": "^2.5.17 ",
     "@max/max": "^1.0.4",
+    "@max/max-app-renderer": "^1.0.5",
+    "@max/meituan-uni-env": "^1.1.2",
     "@max/meituan-uni-network": "^2.0.0",
+    "@max/miniapp-renderer": "^1.0.0",
+    "@mrn/react-native": "^3.0.42",
     "@nibfe/doraemon-practice": "^1.4.2",
-    "@hfe/mad-max": "^0.1.8",
-    "@hfe/mad-max-page-context": "^0.1.8"
+    "create-use-router": "^0.2.0"
   },
   "devDependencies": {
     "@hfe/max-types": "^0.0.4",
